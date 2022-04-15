@@ -1,0 +1,86 @@
+.contacts {
+  text-align: center;
+  position: relative;
+  min-height: 980px;
+  padding-top: 100px;
+  @media (max-width: $breakpointTablet) {
+    padding-top: 20px;
+    min-height: auto;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin-top: 100px;
+    @media (max-width: 1400px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    @media (max-width: $breakpointTablet) {
+      margin-top: 20px;
+    }
+  }
+
+  &__item {
+  }
+
+  &__name {
+    font-size: 30px;
+    color: rgb(182, 155, 103);
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 42px;
+    position: relative;
+    @media (max-width: 1000px) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: $breakpointMobile) {
+      font-size: 14px;
+    }
+    &::before {
+      position: absolute;
+      background-color: $colorMain;
+      height: 1px;
+      width: 100%;
+      content: "";
+    }
+  }
+
+  &__value {
+    margin-top: 42px;
+    display: block;
+    font-size: 30px;
+
+    color: rgb(180, 180, 180);
+    text-transform: uppercase;
+    line-height: 1.4;
+    text-align: center;
+    @media (max-width: 1400px) {
+      margin-top: 20px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 20px;
+    }
+    @media (max-width: $breakpointMobile) {
+      font-size: 14px;
+    }
+  }
+
+  &__bg {
+    background-image: url(../img/contacts/contacts-bg.png);
+    width: 100%;
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-color: #303030;
+    background-blend-mode: lighten;
+    @media (max-width: $breakpointTablet) {
+      min-height: 250px;
+    }
+  }
+}

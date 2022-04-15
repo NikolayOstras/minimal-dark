@@ -1,0 +1,138 @@
+#menu 
+{
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+}
+ 
+#menu__bar
+{
+  width: 45px;
+  height: 40px;
+  margin: 30px 0 20px 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.logo
+{
+  margin: 30px 0 0px 0px;
+}
+
+.bar 
+{
+  height: 3px;
+  width: 100%;
+  background-color: $burgerActiveColor;
+  display: block;
+  content: '';
+  border-radius: 1px;
+  transition: 0.3s ease;
+
+  &:first-child
+  {
+    transform: translateY(-6px);
+  }
+  &:last-child
+  {
+    transform: translateY(6px);
+  }
+}
+
+.nav 
+{
+  transition: 0.3s ease;
+  & ul 
+  {
+    padding: 0 22px;
+    display: flex;
+  }
+  & li
+  {
+   list-style: none;
+   padding: 12px 0;
+   margin-right: 50px;
+   &:last-child
+   {
+     margin-right: 0;
+   }
+  
+   & a
+    {
+      color: $burgerActiveColor;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    & a:hover
+    {
+      font-weight: bold;
+    }
+   }
+}
+
+.nav.active 
+{
+  display: block;
+}
+
+.active .bar 
+{
+  &:first-child
+  {
+    transform: rotateZ(-45deg);
+  }
+  &:nth-child(2)
+  {
+    opacity: 0;
+  }
+  &:last-child
+  {
+   transform: translateY(-7px) rotateZ(45deg);
+  }
+}
+
+@media (max-width: $breakpointTablet) 
+{
+  #menu__bar
+  {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  #menu
+  {
+    min-height: 100vh;
+    align-items: center;
+  }
+  .logo
+  {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  .nav
+  {
+    display: none;
+    margin: 0 auto;
+    & > ul
+    {
+     display: block;
+     & li
+     {
+       margin: 0 auto;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+    }
+  }
+}
+
+@media (max-width: $breakpointMobile)
+{
+  .nav > ul li a
+  {
+    font-size: 1.5em;
+  }
+} 

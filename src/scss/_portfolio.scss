@@ -1,0 +1,221 @@
+.portfolio {
+  min-height: 100vh;
+}
+.drop {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+  &__link {
+    cursor: pointer;
+    display: inline-block;
+    width: 252px;
+    padding: 16px 40px 16px 16px;
+    border: 1px solid #454545;
+    color: rgba(69, 69, 69, 1);
+    font-size: 30px;
+    color: rgb(180, 180, 180);
+    line-height: 1.2;
+    position: relative;
+    @media (max-width: $breakpointTablet) {
+      font-size: 20px;
+    }
+    &--active {
+      border-color: $colorMain;
+      border-bottom: none;
+    }
+    &:hover {
+      color: $colorMain;
+      border-color: $colorMain;
+    }
+    &:hover > .drop__button {
+      background-color: $colorMain;
+    }
+  }
+
+  &__button {
+    height: 1px;
+    width: 14px;
+    background-color: rgba(69, 69, 69, 1);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+
+    &:first-child {
+      right: 26px;
+      transform: rotate(45deg);
+    }
+    &:last-child {
+      right: 16px;
+      transform: rotate(135deg);
+    }
+  }
+
+  &__list {
+    transform: translate(-50.1%, 100%);
+    opacity: 0;
+    z-index: 5;
+    background-color: #303030;
+    visibility: hidden;
+    width: 252px;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+
+    &--active {
+      transition: all 0.3s;
+      opacity: 1;
+      position: absolute;
+      top: 68px;
+      left: 50%;
+      transform: translateX(-49.9%) scale(1);
+      height: auto;
+      visibility: visible;
+      border: 1px solid $colorMain;
+      border-top: none;
+      @media (max-width: $breakpointTablet) {
+        top: 54px;
+      }
+    }
+    & ul li {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:first-child {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__item {
+    font-size: 30px;
+    color: rgb(180, 180, 180);
+    transition: all 0.8s;
+    cursor: pointer;
+    @media (max-width: $breakpointTablet) {
+      font-size: 20px;
+    }
+
+    &:hover {
+      color: $colorMain;
+    }
+  }
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 46px;
+  &__item {
+    width: 49%;
+    height: 270px;
+    position: relative;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    cursor: pointer;
+    &:hover {
+      transition: 0.5s;
+      transform: scale(1.02);
+    }
+    @media (max-width: 900px) {
+      width: 99%;
+    }
+    @media (max-width: $breakpointMobile) {
+      margin-bottom: 5%;
+    }
+  }
+  &__item-filter {
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    background-color: #303030;
+    z-index: 10;
+
+    &:hover {
+      transition: 0.3s;
+      background-color: $colorMain;
+    }
+  }
+  &__item-image {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+  }
+
+  &__card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #b69b67;
+    width: 48%;
+  }
+
+  &__card-title {
+    font-size: 30px;
+    color: rgb(48, 48, 48);
+    text-transform: uppercase;
+    line-height: 1.2;
+    position: relative;
+    padding: 25px 0 14px 25px;
+    @media (max-width: 1440px) {
+      font-size: 20px;
+    }
+    @media (max-width: $breakpointMobile) {
+      font-size: 15px;
+      padding: 5px;
+    }
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 80%;
+      left: 0;
+      background-color: rgb(48, 48, 48);
+    }
+  }
+
+  &__card-text {
+    font-size: 15px;
+    color: rgb(48, 48, 48);
+    line-height: 1.335;
+    text-align: left;
+    padding: 0 25px;
+    margin-top: 15%;
+    @media (max-width: $breakpointMobile) {
+      font-size: 12px;
+      padding: 0 5px;
+    }
+  }
+
+  &__card-legend {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    padding: 0 25px 25px 0;
+    @media (max-width: $breakpointMobile) {
+      padding: 0 5px 5px 0;
+    }
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  &__item {
+    color: #454545;
+    font-size: 15px;
+    &:hover {
+      font-size: 18px;
+    }
+  }
+
+  &__item-button {
+    color: #b4b4b4;
+  }
+
+  &__item--active {
+    color: $colorMain;
+  }
+}

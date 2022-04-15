@@ -1,0 +1,121 @@
+<!-- absolute blocks -->
+
+<div id="anchor"></div>
+
+
+<div class="container ">
+  <header>
+    <div class="logo">
+      <h1 class="logo__title">
+        undercover
+      </h1>
+      <div class="logo__sub-title">
+        <p>
+          design team
+      </p>
+      </div>
+      
+    </div>
+    <div class="header__image">
+      <img src="../img/header/lamp.png" alt="lamp">
+    </div>
+    <div class="header__image-text">
+      <p>our design’s so wanted that we have to hide</p>
+    </div>
+    <div class="header__button">
+      <p>scroll down for more</p>
+      <a href="#services">
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <div id="menu__bar" onclick="menuOnClick()" class="lock-fix" >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+   </div>
+    <div id="menu" class ="lock-fix">
+
+      <h3 class="menu__title">
+        Menu
+      </h3>
+      <div class="menu__content">
+  
+      <nav class="nav">
+        <ul>
+          <li><a href="#">main</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">pricings</a></li>
+          <li><a href="#feedbacks">feedback</a></li>
+          <li><a href="#contacts">contacts</a></li>
+        </ul>
+      </nav>
+      <div class="menu__feedback">
+        <ul>
+          <li><a href="#" type="button" data-open="signup">sign up</a></li>
+          <li><a href="#" type="button" data-open="signin">sign in</a></li>
+          <li><a href="#">send message</a></li>
+        </ul>
+      </div>
+      <div class="menu__search">
+
+          <input type="text" placeholder="SEARCH">
+          <a href=""> <img src="../img/header/search.png" alt="search"></a>
+
+      </div>
+    </div>
+    </div>
+  </header>
+</div>
+  <!-- MODAL -->
+<div class="modal" id="signup">
+   <div class="modal__body">
+     
+         <div class="modal__title">
+            sign up
+         </div>
+         <div class="modal__subtitle">
+           sign up using
+         </div>
+         
+         <div class="modal__social">
+           <a href="" class="modal__fb modal-icon">facebook</a>
+           <a href="" class="modal__google modal-icon">google+</a>
+           <a href="" class="modal__twitter modal-icon">twitter</a>
+         </div>
+         <div class="modal__subtitle">
+          or enter following information
+         </div>
+         <input type="text" name="name" id="nameup" class="modal__input-name" required placeholder="Name">
+         <input type="email" name="email" id="emailup" class="modal__input-email" required placeholder="Email">
+         <div class="modal__input-group">
+          <input type="password" name="password" id="passwordup" class="modal__input-password" required placeholder="Password">
+          <button type="submit" class="modal__button" data-close="">sign up</button>
+         </div>
+   </div>
+</div>
+<div class="modal" id="signin">
+  <div class="modal__body">
+     <div class="modal__content">
+        <div class="modal__title">
+           sign in
+        </div>
+        <div class="modal__subtitle">
+          sign in using
+        </div>
+        <div class="modal__social">
+          <a href="" class="modal__fb modal-icon">facebook</a>
+          <a href="" class="modal__google modal-icon">google+</a>
+          <a href="" class="modal__twitter modal-icon">twitter</a>
+        </div>
+        <div class="modal__subtitle">
+         or your account
+        </div>
+        <input type="text" name="name" id="namein" class="modal__input-name" required placeholder="Name or Email">
+        <input type="password" name="password" id="passwordin" class="modal__input-password" required placeholder="Password">
+        <button type="submit" class="modal__button--in" data-close="">sign in</button>
+     </div>
+  </div>
+</div>
