@@ -592,13 +592,20 @@ header {
 }
 
 .footer__list-item {
+<<<<<<< HEAD
   /*padding: 0 20px;*/
+=======
+  padding: 0 20px;
+>>>>>>> 76197b8661ce3c024ecd0fc6983201b13fc6da18
   font-size: 15px;
   color: rgb(180, 180, 180);
   text-transform: uppercase;
   line-height: 1.2;
+<<<<<<< HEAD
   display: block;
   width: 100%;
+=======
+>>>>>>> 76197b8661ce3c024ecd0fc6983201b13fc6da18
 }
 
 .footer__list-item:hover {
@@ -1126,7 +1133,10 @@ header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 46px;
+<<<<<<< HEAD
   width: 100%;
+=======
+>>>>>>> 76197b8661ce3c024ecd0fc6983201b13fc6da18
 }
 
 .grid__item {
@@ -2121,6 +2131,7 @@ html {
 
 .webp #menu { background-image: url(../img/header/menuBg.webp); }
 
+<<<<<<< HEAD
 .webp .contacts__bg { background-image: url(../img/contacts/contacts-bg.webp); }
 .dropdown {
   position: relative;
@@ -2185,3 +2196,6 @@ html {
 .dropdown__input--hidden {
   display: none;
 }
+=======
+.webp .contacts__bg { background-image: url(../img/contacts/contacts-bg.webp); }
+>>>>>>> 76197b8661ce3c024ecd0fc6983201b13fc6da18
